@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logalyser"
+version = "0.1.0"
+description = "Log analysis tool for automated warehouse systems"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+logalyser = "logalyser.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+]
