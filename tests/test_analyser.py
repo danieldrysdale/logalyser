@@ -7,8 +7,7 @@ SAMPLE_LOG = Path(__file__).parent / "data" / "sample.log"
 
 
 def _get_result():
-    entries = list(parse_log(SAMPLE_LOG))
-    return analyse(entries)
+    return analyse(parse_log(SAMPLE_LOG))
 
 
 def test_total_entries():

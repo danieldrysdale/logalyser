@@ -2,6 +2,7 @@
 analyser.py - Statistical analysis of parsed log entries.
 """
 
+from typing import Iterator
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -21,13 +22,17 @@ class AnalysisResult:
     time_end: datetime | None = None
 
 
-def analyse(entries: list[LogEntry], top_n: int = 10) -> AnalysisResult:
+def analyse(entries: Iterator[LogEntry], top_n: int = 10, level: str | None = None) -> AnalysisResult:
     """
-    Analyse a list of LogEntry objects and return an AnalysisResult.
+    Analyse a stream of LogEntry objects and return an AnalysisResult.
+    Accepts a generator or any iterable of LogEntry objects.
     """
     result = AnalysisResult()
 
     for entry in entries:
+        if level and entry.level != level:
+            continue
+
         result.total_entries += 1
 
         # Track time range
