@@ -1,28 +1,28 @@
-16/04/2026 07:28:54.123456  [convman] System startup complete
-16/04/2026 07:29:01.234567  [convman] ShipperScanned received SSCC=00393402907045498168
-16/04/2026 07:29:01.247891  [convman] SetTimerRequest sent (hold decision)
-16/04/2026 07:29:07.249102  [convman] Timer fired / Calling eventShipperScanned SSCC=00393402907045498168
-16/04/2026 07:29:07.251234  [nioman] RDS packet received SSCC=00393402907045498168
-16/04/2026 07:29:11.470891  [nioman] ST_OUT_PASS: Finished SSCC=00393402907045498168
-16/04/2026 07:30:15.334521  [convman] ShipperScanned received SSCC=00393402907126511014
-16/04/2026 07:30:15.347832  [convman] SetTimerRequest sent (hold decision)
-16/04/2026 07:30:21.349901  [convman] Timer fired / Calling eventShipperScanned SSCC=00393402907126511014
-16/04/2026 07:30:21.352100  [nioman] RDS packet received SSCC=00393402907126511014
-16/04/2026 07:30:25.991234  [nioman] ST_OUT_PASS: Finished SSCC=00393402907126511014
-16/04/2026 08:15:03.445621  [convman] ERROR: Connection timeout on port 5432
-16/04/2026 08:15:03.447891  [convman] Retrying connection (attempt 1 of 3)
-16/04/2026 08:15:04.451234  [convman] Retrying connection (attempt 2 of 3)
-16/04/2026 08:15:05.459876  [convman] ERROR: Connection timeout on port 5432
-16/04/2026 08:15:06.461234  [convman] Connection restored
-16/04/2026 08:30:36.848592  [convman] ShipperScanned received SSCC=00393402907015523593
-16/04/2026 08:30:36.860795  [convman] SetTimerRequest sent (hold decision)
-16/04/2026 08:30:42.879216  [convman] Timer fired / Calling eventShipperScanned SSCC=00393402907015523593
-16/04/2026 08:30:42.881445  [nioman] RDS packet received SSCC=00393402907015523593
-16/04/2026 08:30:47.334521  [nioman] ST_OUT_PASS: Finished SSCC=00393402907015523593
-16/04/2026 09:00:00.000000  [nioman] WARNING: Buffer threshold reached
-16/04/2026 09:00:00.112233  [nioman] WARNING: Buffer threshold reached
-16/04/2026 09:00:01.334521  [nioman] ERROR: Failed to acquire lock
-16/04/2026 01:15:03.991234  [convman] ERROR: WAGO PLC communication failure
-16/04/2026 01:15:04.001234  [convman] ERROR: WAGO PLC communication failure
-16/04/2026 01:15:04.011234  [convman] ERROR: WAGO PLC communication failure
-16/04/2026 01:15:09.112233  [convman] WAGO PLC communication restored
+16/04/2026 07:28:54.123456  [conveyor] System startup complete
+16/04/2026 07:29:01.234567  [conveyor] Scan received SSCC=00393402907045498168
+16/04/2026 07:29:01.247891  [conveyor] TimerStarted sent (hold decision)
+16/04/2026 07:29:07.249102  [conveyor] Timer fired / Calling eventScan SSCC=00393402907045498168
+16/04/2026 07:29:07.251234  [io_process] packet received SSCC=00393402907045498168
+16/04/2026 07:29:11.470891  [io_process] PASS: Finished SSCC=00393402907045498168
+16/04/2026 07:30:15.334521  [conveyor] Scan received SSCC=00393402907126511014
+16/04/2026 07:30:15.347832  [conveyor] TimerStarted sent (hold decision)
+16/04/2026 07:30:21.349901  [conveyor] Timer fired / Calling eventScan SSCC=00393402907126511014
+16/04/2026 07:30:21.352100  [io_process] packet received SSCC=00393402907126511014
+16/04/2026 07:30:25.991234  [io_process] PASS: Finished SSCC=00393402907126511014
+16/04/2026 08:15:03.445621  [conveyor] ERROR: Connection timeout on port 5432
+16/04/2026 08:15:03.447891  [conveyor] Retrying connection (attempt 1 of 3)
+16/04/2026 08:15:04.451234  [conveyor] Retrying connection (attempt 2 of 3)
+16/04/2026 08:15:05.459876  [conveyor] ERROR: Connection timeout on port 5432
+16/04/2026 08:15:06.461234  [conveyor] Connection restored
+16/04/2026 08:30:36.848592  [conveyor] Scan received SSCC=00393402907015523593
+16/04/2026 08:30:36.860795  [conveyor] TimerStarted sent (hold decision)
+16/04/2026 08:30:42.879216  [conveyor] Timer fired / Calling eventScan SSCC=00393402907015523593
+16/04/2026 08:30:42.881445  [io_process] packet received SSCC=00393402907015523593
+16/04/2026 08:30:47.334521  [io_process] PASS: Finished SSCC=00393402907015523593
+16/04/2026 09:00:00.000000  [io_process] WARNING: Buffer threshold reached
+16/04/2026 09:00:00.112233  [io_process] WARNING: Buffer threshold reached
+16/04/2026 09:00:01.334521  [io_process] ERROR: Failed to acquire lock
+16/04/2026 01:15:03.991234  [conveyor] ERROR: WAGO communication failure
+16/04/2026 01:15:04.001234  [conveyor] ERROR: WAGO communication failure
+16/04/2026 01:15:04.011234  [conveyor] ERROR: WAGO communication failure
+16/04/2026 01:15:09.112233  [conveyor] WAGO communication restored

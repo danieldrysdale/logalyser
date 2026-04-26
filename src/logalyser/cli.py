@@ -13,7 +13,7 @@ from .analyser import analyse
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="logalyser",
-        description="Analyse aWARDS-format log files for patterns and anomalies.",
+        description="Analyse warehouse automation system log files for patterns and anomalies.",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 

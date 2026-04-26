@@ -15,7 +15,7 @@ def test_entry_fields():
     entries = list(parse_log(SAMPLE_LOG))
     first = entries[0]
     assert isinstance(first.timestamp, datetime)
-    assert first.process == "convman"
+    assert first.process == "conveyor"
     assert "startup" in first.message.lower()
 
 

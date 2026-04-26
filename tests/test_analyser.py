@@ -25,8 +25,8 @@ def test_level_counts():
 
 def test_errors_by_process():
     result = _get_result()
-    assert "convman" in result.errors_by_process
-    assert "nioman" in result.errors_by_process
+    assert "conveyor" in result.errors_by_process
+    assert "io_process" in result.errors_by_process
 
 
 def test_timeline_buckets():

@@ -1,5 +1,5 @@
 """
-parser.py - Log file parsing for aWARDS-format log files.
+parser.py - Log file parsing for warehouse automation system log files.
 
 Supports plain text and bz2-compressed log files.
 Log line format: DD/MM/YYYY HH:MM:SS.ffffff  [process] message
