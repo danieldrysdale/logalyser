@@ -46,19 +46,19 @@ def build_parser() -> argparse.ArgumentParser:
 
 def cmd_analyse(args: argparse.Namespace) -> int:
     try:
-        entries = list(parse_log(args.logfile))
+        result = analyse(
+            parse_log(args.logfile),
+            top_n=args.top,
+            level=args.level,
+        )
     except FileNotFoundError as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1
 
-    if args.level:
-        entries = [e for e in entries if e.level == args.level]
-
-    if not entries:
+    if result.total_entries == 0:
         print("No matching log entries found.")
         return 0
 
-    result = analyse(entries, top_n=args.top)
     _print_report(result, args)
     return 0
 
