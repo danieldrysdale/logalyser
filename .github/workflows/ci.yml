@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ci:
+    uses: danieldrysdale/.github/.github/workflows/python-ci.yml@main
+    with:
+      python-version: '3.12'
+      requirements-file: 'pyproject.toml'
+      test-path: 'tests/'
+      docker-build: false
+    secrets: {}
